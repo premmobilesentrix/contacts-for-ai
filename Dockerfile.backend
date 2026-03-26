@@ -22,4 +22,4 @@ COPY backend/sql /app/sql
 
 EXPOSE 4000
 
-CMD ["node", "dist/server.js"]
+CMD ["dist/server.js"]
