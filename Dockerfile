@@ -9,7 +9,7 @@ COPY backend .
 
 RUN npm run build
 
-FROM gcr.io/distroless/nodejs22-debian12
+FROM node:22-alpine
 
 WORKDIR /app
 COPY --from=builder /app/dist /app/dist
