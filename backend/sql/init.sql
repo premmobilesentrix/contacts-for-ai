@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS contacts (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(200) NOT NULL,
+  email VARCHAR(320) NOT NULL UNIQUE,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+CREATE INDEX IF NOT EXISTS contacts_created_at_idx ON contacts(created_at DESC);
+

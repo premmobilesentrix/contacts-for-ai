@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contacts Manager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app-header">
+        <h1>Contacts Manager</h1>
+        <p>Simple static frontend + API + PostgreSQL</p>
+      </header>
+
+      <section class="card">
+        <h2>Add Contact</h2>
+        <form id="contact-form">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+          <button type="submit">Create</button>
+          <p id="form-error" class="error-message" hidden></p>
+          <p id="form-success" class="success-message" hidden></p>
+        </form>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <h2>Contacts</h2>
+          <button id="refresh-btn" type="button">Refresh</button>
+        </div>
+        <p id="list-status" class="status-message"></p>
+        <table id="contacts-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Created</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="contacts-tbody"></tbody>
+        </table>
+      </section>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
+
